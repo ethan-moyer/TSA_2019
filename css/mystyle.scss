@@ -5,18 +5,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
 
-$primary: black;
+$primary: rgb(120, 241, 249);
 $info: rgb(40, 194, 255);
 $dark: rgb(3, 7, 14);
 
 $body-background-color: $primary;
 
 $navbar-height: 3.25rem;
+$navbar-item-color: white;
 $navbar-item-hover-color: white;
 $navbar-item-hover-background-color: black;
+$navbar-dropdown-arrow: white;
 $navbar-dropdown-background-color: #3dc9e6;
-$navbar-dropdown-item-hover-color: white;
-$navbar-dropdown-item-hover-background-color: black;
+$navbar-dropdown-item-hover-color: $navbar-item-hover-color;
+$navbar-dropdown-item-hover-background-color: transparent;
 $navbar-background-color: rgb(120, 241, 249);
 
 body {
@@ -37,8 +39,10 @@ h1.make-bungee {
 }
 
 .navbar.is-spaced .navbar-dropdown,
-.navbar-dropdown.is-boxed {
+.navbar-dropdown.is-boxed,
+.navbar-item, .navbar-link {
     border-radius: 0px;
+    outline: 0;
 }
 
 .frontgradient {
