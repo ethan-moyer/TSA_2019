@@ -1,0 +1,12 @@
+{
+  "name": "scahs-tsa-2019",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mysticpenguin/TSA_2019.git"
+  },
+  "author": "mysticpenguin",
+  "dependencies": {
+    "bulma": "^0.7.2"
+  }
+}

@@ -1,1 +1,4 @@
 name: TSA 2019
+sass:
+    sass_dir: node_modules/bulma
+exclude: [".c9", ".git", ".sass-cache", "node_modules", "Gemfile*", "package.json"]

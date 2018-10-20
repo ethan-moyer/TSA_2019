@@ -5,18 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="../css/mystyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link rel="stylesheet" href="css/mystyle.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </head>
 
-    <body>
-        {% include navbar.html %}
-        <br>
-        <div class="container is-fluid has-text-white make-roboto">
-            {{ content }}
-        </div>
-
-    </body>
+<body>
+    {% include navbar.html %}
+    {{ content }}
+</body>
 
 </html>
