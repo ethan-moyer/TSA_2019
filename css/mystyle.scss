@@ -22,14 +22,14 @@ $navbar-dropdown-item-hover-background-color: transparent;
 $navbar-background-color: transparent;
 
 body {
-    overflow-y: auto;
+    // overflow-x: hidden;
 }
 
 .fullcenter {
     margin-top: -$navbar-height;
 }
 
-h1.make-bungee {
+.make-bungee {
     font-family: 'Bungee Shade', cursive;
     color: white;
 }
@@ -49,6 +49,15 @@ h1.make-bungee {
     background-color: $navbar-item-hover-background-color !important;
 }
 
+.columns.is-centered {
+    justify-content: center;
+    align-items: center;
+}
+
+.has-image-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @import "bulma.sass";
 @import "gradient.css";
