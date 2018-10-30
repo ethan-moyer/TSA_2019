@@ -5,10 +5,10 @@
 	min-height: 100vh;
 	min-width: 100vw;
 	z-index: 100;
-	-webkit-animation: MoveBG 120s ease-in-out infinite;
-	-moz-animation: MoveBG 120s ease-in-out infinite;
-	-o-animation: MoveBG 120s ease-in-out infinite;
-	animation: MoveBG 120s ease-in-out infinite;
+	-webkit-animation: MoveBG 60s ease infinite;
+	-moz-animation: MoveBG 60s ease infinite;
+	-o-animation: MoveBG 60s ease infinite;
+	animation: MoveBG 60s ease infinite;
 }
 
 @-webkit-keyframes MoveBG {

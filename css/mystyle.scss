@@ -4,6 +4,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
 $primary: rgb(120, 241, 249);
 $info: rgb(40, 194, 255);
@@ -21,10 +22,18 @@ $navbar-dropdown-item-hover-color: $navbar-item-hover-color;
 $navbar-dropdown-item-hover-background-color: transparent;
 $navbar-background-color: transparent;
 
+$title-color: white;
+$subtitle-color: white;
+
 body {
     // overflow-x: hidden;
 }
-
+.spaced {
+    letter-spacing: 0.2rem;
+}
+.make-nunito {
+    font-family: 'Nunito Sans', sans-serif;
+}
 .fullcenter {
     margin-top: -$navbar-height;
 }

@@ -3,44 +3,82 @@ title: Our Music
 layout: default
 ---
 <br>
+
+<div id="modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <article class="tile is-child make-nunito spaced has-text-centered is-clipped has-image-centered">
+      <p id="modalAlbum" class="title is-4">ALBUM NAME</p>
+      <p id="modalSong" class="subtitle">SONG NAME</p>
+      <img src="http://via.placeholder.com/399">
+    </article>
+  </div>
+  <button class="modal-close is-large" onclick="playAudio()" aria-label="close"></button>
+</div>
+
 <div class="tile is-ancestor">
-  
-  <div class="tile is-parent is-vertical has-text-centered">
+  <div class="tile is-parent has-text-centered">
     <article class="tile is-child">
-      <p class="title make-bungee has-text-white">A L B U M 1</p>
-      <p class="subtitle has-text-white make-bungee">2 0 1 1</p>
+      <p class="title is-2 make-nunito">OUR MUSIC</p>
+    </article>
+  </div>
+</div>
+<div class="tile is-ancestor">
+  <div class="tile is-parent is-vertical has-text-centered">
+    <article class="tile is-child make-nunito spaced">
+      <p class="title is-4">HELLO WORLD</p>
+      <p class="subtitle">2011</p>
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <img src="http://via.placeholder.com/250x250">
+        <a onclick="playAudio('HELLO WORLD', '9.21')">
+          <img src="http://via.placeholder.com/399">
+        </a>
       </figure>
     </article>
   </div>
   
   <div class="tile is-parent is-vertical has-text-centered">
-    <article class="tile is-child">
-      <p class="title has-text-white make-bungee">A L B U M 2</p>
-      <p class="subtitle has-text-white make-bungee">2 0 1 2</p>
+    <article class="tile is-child make-nunito spaced">
+      <p class="title is-4">0xDEADBEEF</p>
+      <p class="subtitle">2012</p>
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <img src="http://via.placeholder.com/250x250">
+        <img src="http://via.placeholder.com/399">
       </figure>
     </article>
   </div>
   
   <div class="tile is-parent is-vertical has-text-centered">
-    <article class="tile is-child">
-      <p class="title has-text-white make-bungee">A L B U M 3</p>
-      <p class="subtitle has-text-white make-bungee">2 0 1 4</p>
+    <article class="tile is-child make-nunito spaced">
+      <p class="title is-4">C64</p>
+      <p class="subtitle">2014</p>
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <img src="http://via.placeholder.com/250x250">
+        <img src="http://via.placeholder.com/399">
       </figure>
     </article>
   </div>
 </div>
+<script>
+  var audio1 = new Audio('audio/921.mp3');
+  var isPlaying = false;
+  function playAudio(album, song) {
+    if (isPlaying) {
+      audio1.pause();
+      isPlaying = false;
+      document.getElementById("modal").className = "modal";
+    } else {
+      audio1.play();
+      isPlaying = true;
+      document.getElementById("modalAlbum").innerHTML = album;
+      document.getElementById("modalSong").innerHTML = song;
+      document.getElementById("modal").className = "modal is-active";
+    }
+  }
+</script>
 <!--<div class="tile is-ancestor is-vertical is-5" style="margin: auto">
   <article class="tile is-parent">
     <div class="tile is-child is-4 is-parent">
