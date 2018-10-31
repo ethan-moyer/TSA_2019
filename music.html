@@ -31,7 +31,7 @@ layout: default
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <a onclick="playAudio('HELLO WORLD', '9.21')">
+        <a onclick="playAudio('HELLO WORLD', '9.21', 'audio/921.mp3')">
           <img src="http://via.placeholder.com/399">
         </a>
       </figure>
@@ -45,7 +45,9 @@ layout: default
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <img src="http://via.placeholder.com/399">
+        <a onclick="playAudio('0xDEADBEEF', 'DKC', 'audio/dkc.mp3')">
+          <img src="http://via.placeholder.com/399">
+        </a>
       </figure>
     </article>
   </div>
@@ -57,21 +59,26 @@ layout: default
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <img src="http://via.placeholder.com/399">
+        <a onclick="playAudio('C64', 'RPG', 'audio/rpg.mp3')">
+          <img src="http://via.placeholder.com/399">
+        </a>
       </figure>
     </article>
   </div>
 </div>
 <script>
-  var audio1 = new Audio('audio/921.mp3');
   var isPlaying = false;
-  function playAudio(album, song) {
+  var audio = document.createElement('audio');
+  
+  function playAudio(album, song, audioClip) {
     if (isPlaying) {
-      audio1.pause();
+      audio.pause();
+      audio.currentTime = 0;
       isPlaying = false;
       document.getElementById("modal").className = "modal";
     } else {
-      audio1.play();
+      audio.src = audioClip;
+      audio.play();
       isPlaying = true;
       document.getElementById("modalAlbum").innerHTML = album;
       document.getElementById("modalSong").innerHTML = song;
