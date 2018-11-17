@@ -80,8 +80,8 @@ layout: default
       audio.src = audioClip;
       audio.play();
       isPlaying = true;
-      document.getElementById("modalAlbum").innerHTML = album;
-      document.getElementById("modalSong").innerHTML = song;
+      document.getElementById("modalAlbum").innerHTML = "Playing: " + song;
+      document.getElementById("modalSong").innerHTML = "From: " + album;
       document.getElementById("modal").className = "modal is-active";
     }
   }
