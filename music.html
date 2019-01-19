@@ -10,7 +10,7 @@ layout: default
     <article class="tile is-child make-nunito spaced has-text-centered is-clipped has-image-centered">
       <p id="modalAlbum" class="title is-4">ALBUM NAME</p>
       <p id="modalSong" class="subtitle">SONG NAME</p>
-      <img src="http://via.placeholder.com/399">
+      <img id="modalImage" src="http://via.placeholder.com/399">
     </article>
   </div>
   <button class="modal-close is-large" onclick="playAudio()" aria-label="close"></button>
@@ -27,12 +27,12 @@ layout: default
   <div class="tile is-parent is-vertical has-text-centered">
     <article class="tile is-child make-nunito spaced">
       <p class="title is-4">HELLO WORLD</p>
-      <p class="subtitle">2011</p>
+      <p class="subtitle">2017</p>
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <a onclick="playAudio('HELLO WORLD', '9.21', 'audio/921.mp3')">
-          <img src="http://via.placeholder.com/399">
+        <a onclick="playAudio('HELLO WORLD', 'CONTOSO', 'audio/TheEnd.mp3', 'images/HelloWorld.png')">
+          <img src="images/HelloWorld.png">
         </a>
       </figure>
     </article>
@@ -41,12 +41,12 @@ layout: default
   <div class="tile is-parent is-vertical has-text-centered">
     <article class="tile is-child make-nunito spaced">
       <p class="title is-4">0xDEADBEEF</p>
-      <p class="subtitle">2012</p>
+      <p class="subtitle">2017</p>
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <a onclick="playAudio('0xDEADBEEF', 'DKC', 'audio/dkc.mp3')">
-          <img src="http://via.placeholder.com/399">
+        <a onclick="playAudio('0xDEADBEEF', '0x0C0010FF', 'audio/Turtleneck.mp3', 'images/DeadBeef.png')">
+          <img src="images/DeadBeef.png">
         </a>
       </figure>
     </article>
@@ -54,12 +54,12 @@ layout: default
   
   <div class="tile is-parent is-vertical has-text-centered">
     <article class="tile is-child make-nunito spaced">
-      <p class="title is-4">C64</p>
-      <p class="subtitle">2014</p>
+      <p class="title is-4">CMD</p>
+      <p class="subtitle">2018</p>
     </article>
     <article class="tile is-child">
       <figure class="has-image-centered">
-        <a onclick="playAudio('C64', 'RPG', 'audio/rpg.mp3')">
+        <a onclick="playAudio('CMD', 'MKDIR', 'audio/RearView.mp3', 'images/HelloWorld.png')">
           <img src="http://via.placeholder.com/399">
         </a>
       </figure>
@@ -70,7 +70,7 @@ layout: default
   var isPlaying = false;
   var audio = document.createElement('audio');
   
-  function playAudio(album, song, audioClip) {
+  function playAudio(album, song, audioClip, image) {
     if (isPlaying) {
       audio.pause();
       audio.currentTime = 0;
@@ -82,6 +82,7 @@ layout: default
       isPlaying = true;
       document.getElementById("modalAlbum").innerHTML = "Playing: " + song;
       document.getElementById("modalSong").innerHTML = "From: " + album;
+      document.getElementById("modalImage").src = image;
       document.getElementById("modal").className = "modal is-active";
     }
   }
