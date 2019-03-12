@@ -24,6 +24,7 @@ $navbar-background-color: transparent;
 
 $title-color: white;
 $subtitle-color: white;
+$dimensions: 16 24 32 48 64 96 128 256;
 
 body {
     // overflow-x: hidden;
@@ -66,6 +67,17 @@ body {
 .has-image-centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+img.is-rounded {
+    border-radius: 100%;
+    height: 80%;
+    width: 80%;
+}
+
+.purchase-button {
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 10px;
 }
 
 @import "bulma.sass";
