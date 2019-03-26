@@ -86,3 +86,7 @@ img.is-rounded {
 
 @import "bulma.sass";
 @import "gradient.css";
+
+.level-item {
+    flex-shrink: 0.6;
+}
